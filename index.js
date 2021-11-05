@@ -36,3 +36,14 @@ function generatePassword() {
   }, 3000);
 }
 generateButton.addEventListener("click", generatePassword);
+// loader
+const loader = document.querySelector(".loader");
+
+function load() {
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      loader.className += " hidden";
+    }, 2500);
+  });
+}
+load();

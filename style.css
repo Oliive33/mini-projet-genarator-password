@@ -116,3 +116,44 @@ button:hover {
 button:active {
   transform: scale(1.05);
 }
+/* loader */
+.animate {
+  text-align: center;
+  animation: load 2s infinite ease alternate;
+}
+
+@keyframes load {
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+    filter: blur(1px);
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(40deg, #27c266 0%, #00ffd1 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader.hidden {
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
