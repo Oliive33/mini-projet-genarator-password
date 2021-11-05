@@ -157,3 +157,12 @@ button:active {
     visibility: hidden;
   }
 }
+@media screen and (max-width: 400px) {
+  * {
+    font-size: 1rem !important;
+  }
+  label {
+    height: 50px;
+    width: 50px;
+  }
+}
